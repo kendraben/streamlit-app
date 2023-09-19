@@ -69,9 +69,6 @@ title_chain = LLMChain(llm=llm, prompt=title_template, verbose=True, output_key=
 script_chain = LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='concepts')
 sequentialchain = SequentialChain(chains=[title_chain,script_chain], input_variables=['opportunity'], output_variables=['concepts'], verbose=True)
 
-
-
-
 if prompt1:
     response = sequentialchain(prompt1)
     #st.write(response)
