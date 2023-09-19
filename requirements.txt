@@ -5,5 +5,3 @@ pydeck
 streamlit
 openai
 langchain
-python-dotenv
-dotenv

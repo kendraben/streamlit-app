@@ -1,6 +1,5 @@
 # Bring in deps
 import os 
-from dotenv import load_dotenv
 import streamlit as st 
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -9,10 +8,7 @@ from langchain.chains import ConversationChain
 #from langchain.memory import ConversationBufferMemory
 #from langchain.utilities import WikipediaAPIWrapper 
 
-load_dotenv()
-
-apiKey = os.getenv('OPENAI_API_KEY')
-
+apiKey = st.secrets['OPENAI_API_KEY']
 
 st.markdown("# Single Framing")
 #st.sidebar.markdown("# Verdi Concepts")
