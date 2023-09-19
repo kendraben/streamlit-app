@@ -1,11 +1,14 @@
-import os 
-from apikey import apikey 
+import os
+from dotenv import load_dotenv
 import streamlit as st
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 
-os.environ['OPENAI_API_KEY'] = apikey
+load_dotenv()
+
+apiKey = os.getenv('OPENAI_API_KEY')
+
 
 st.markdown("# Multiple Framings")
 
